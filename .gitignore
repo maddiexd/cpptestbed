@@ -41,3 +41,5 @@
 *.dwo
 .devcontainer/Dockerfile
 playfile
+.DS_Store
+calculator
