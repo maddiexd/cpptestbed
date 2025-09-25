@@ -1,15 +1,14 @@
 #include <iostream>
 using namespace std;
 
-
-
 void swap(int* num1, int* num2) {
   int buffer = *num1;
   *num1 = *num2;
   *num2 = buffer;
 }
 
-void sort(int* input, int size) {
+void sort(int* input) {
+    int size = sizeof(input) / sizeof(input[0]);
     bool swapped = true;
     while (swapped) {
         swapped = false;
@@ -23,8 +22,6 @@ void sort(int* input, int size) {
     } 
 }
 
-
-
 int main() {
   int array[] = {
     74, 19, 92, 36, 87, 23, 50, 14, 65, 41,
@@ -33,8 +30,8 @@ int main() {
     76, 17, 43, 88, 31, 97, 6, 100, 25, 83,
     12, 37, 60, 2, 94, 15, 10, 59, 73, 44
   };
+  sort(array);
   int size = sizeof(array) / sizeof(array[0]);
-  sort(array, size);
   for (int j = 0; j <= size - 1; j++) {
     cout << array[j] << ", ";
   }
