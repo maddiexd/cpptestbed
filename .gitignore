@@ -43,3 +43,6 @@
 playfile
 .DS_Store
 calculator
+factorial
+linearsearch
+.gitignore
