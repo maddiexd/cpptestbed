@@ -91,12 +91,14 @@ class hand{
 void blackJack() {
     deckOfCards topdeck; 
     hand player, dealer;
-    player.draw(topdeck, 1);
+    player.draw(topdeck, 1); // draw the cards as would be in real game
+    // draw the card that will be visible
     int dealerCard = dealer.draw(topdeck);
     std::cout << "The dealer draws the "<< beautifyCard(dealerCard) << std::endl;
-    player.draw(topdeck, 1);
+
+    player.draw(topdeck, 1); // draw the second cards
     dealer.draw(topdeck, 1);
-    player.printStatus();
+    player.printStatus(); // print the status of the player's hand.
 
     bool stand = false, invalidInput = false;
     while (dealer.getPoints() + player.getPoints() <= 42) { // keeps going if someone can play
@@ -105,7 +107,7 @@ void blackJack() {
             std::string choice;
             std::cin >> choice;
 
-            switch (choice[0]) {
+            switch (choice[0]) { // make the decision based on input entered
                 case 's':
                     std::cin.clear();
                     stand = true;
@@ -141,7 +143,7 @@ void blackJack() {
 int main() {
     std::string choice;
     bool continu = true;
-    while (continu) {
+    while (continu) { // simple looping code for replaying.
         blackJack();
         std::cout << "Play Again? (y/n)";
         std::cin >> choice;
