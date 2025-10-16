@@ -6,9 +6,9 @@
                 "${workspaceFolder}/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/lib64/ccache/gcc",
+            "compilerPath": "/usr/lib64/ccache/gpp",
             "cStandard": "c17",
-            "cppStandard": "c++98",
+            "cppStandard": "c++17",
             "intelliSenseMode": "linux-gcc-x64"
         }
     ],
