@@ -123,7 +123,7 @@ void blackJack() {
                     std::cin.clear();
             }
         }
-        else if (stand && !invalidInput && (dealer.getPoints() < 17)) { //checks if the dealer should hit
+        else if (!invalidInput && (dealer.getPoints() < 17)) { //checks if the dealer should hit
             std::cout << "Dealer hits!" << std::endl;
             dealer.draw(topdeck, 1);
         }
